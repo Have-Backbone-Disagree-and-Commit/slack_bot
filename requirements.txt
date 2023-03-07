@@ -1,4 +1,5 @@
 mangum
+ujson
 fastapi
 uvicorn[standard]
 slack-api
