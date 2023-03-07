@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import UJSONResponse
+import ujson
 from mangum import Mangum
 
 app = FastAPI(default_response_class=UJSONResponse)
