@@ -6,6 +6,7 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t lib
+      - sudo apt-get install python3-ujson
   build:
     commands:
       - echo "Zipping deployment package..."
