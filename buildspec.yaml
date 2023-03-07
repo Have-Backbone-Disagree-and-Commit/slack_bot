@@ -1,0 +1,23 @@
+version: 0.1
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "Installing dependencies..."
+			# requirements.txt에 명시된 디펜던시를 lib디렉토리에 설치
+      - pip install -r requirements.txt -t lib
+  build:
+    commands:
+			# 디펜던시 패키지(lib)을 압축
+      - echo "Zipping deployment package..."
+      - cd lib
+      - zip -r9 ../deployment_package.zip .
+      - cd ..
+      - zip -g deployment_package.zip lambda_function.py
+  post_build:
+    commands:
+			# aws cli를 활용하여 lambda function 업로드
+      - echo "Updating lambda Function..."
+      - aws lambda update-function-code --function-name Slackbot-FastAPI --zip-file fileb://deployment_package.zip
+      - echo "DONE!!"
