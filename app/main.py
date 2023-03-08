@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from .fastapi import FastAPI
 from .routers import crawlRouter
-from mangum import Mangum
+from .mangum import Mangum
 
 app = FastAPI()
 app.include_router(crawlRouter.router)
