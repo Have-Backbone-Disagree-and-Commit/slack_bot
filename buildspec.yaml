@@ -9,10 +9,12 @@ phases:
   build:
     commands:
       - echo "Zipping deployment package..."
-      - (cd lib; zip ../lambda_function.zip -r .)
-      - zip lambda_function.zip -u main.py
+      - cd lib
+      - zip -r9 ../deployment_package.zip .
+      - cd ..
+      - zip -g deployment_package.zip main.py
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name Slackbot-FastAPI-Lambda --zip-file fileb://lambda_function.zip
+      - aws lambda update-function-code --function-name Slackbot-FastAPI-Lambda --zip-file fileb://deployment_package.zip
       - echo "DONE!!"
