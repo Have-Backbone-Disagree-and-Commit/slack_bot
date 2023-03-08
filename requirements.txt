@@ -4,3 +4,4 @@ mangum
 aiohttp
 httpx
 slack-sdk
+boto3

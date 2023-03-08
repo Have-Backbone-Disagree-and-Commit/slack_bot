@@ -3,10 +3,12 @@ from mangum import Mangum
 import json
 import httpx
 import slack
+import boto3
 
-key = "key"
+ssm = boto3.client('ssm')
+parameter = ssm.get_parameter(Name='/slackapi/BOT_TOKEN', WithDecryption=False)
+key = parameter['Parameter']['Value']
 client = slack.WebClient(token = key)
-
 
 app = FastAPI()
 handler = Mangum(app)
