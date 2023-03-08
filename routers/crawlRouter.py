@@ -47,11 +47,11 @@ async def elastic(data : dict):
             
         print(obj)
         #headers = {'Content-Type': 'application/json'}
-        response = httpx.post("http://localhost:8003/ics_gen", data=obj)
+        #response = httpx.post("http://localhost:8003/ics_gen", data=obj)
         
-        fileUrl = "http://localhost:8003/" + response.text[16:]
-        if response == "./generatedFiles/noname.ics":
-            fileUrl = "http://localhost:8003/nofile.html"
+        #fileUrl = "http://localhost:8003/" + response.text[16:]
+        #if response == "./generatedFiles/noname.ics":
+        #    fileUrl = "http://localhost:8003/nofile.html"
             
         #fileUrl = str(response.text) 
         #title, location, position, description = "none","none","none","none"
@@ -125,15 +125,16 @@ async def elastic(data : dict):
 						"text": "Add to Calendar",
 					},
 					"value": "calendar_add_btn",
-					"url": fileUrl,
+					"url": "https://naver.com",
 					"action_id": "button-action"
 				}
 			}
         ]
         
-        print("\r\n response : " + response.text)
-        if response.text :
-            client.chat_postMessage(channel="#playground", text="text", blocks=blocks)
+        
+        #print("\r\n response : " + response.text)
+        #if response.text :
+        client.chat_postMessage(channel="#playground", text="text", blocks=blocks)
     
     print("\r\nok\r\n")
     return "ok"

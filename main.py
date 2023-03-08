@@ -21,4 +21,10 @@ async def root():
 async def slack_test():
     client = slack.WebClient(token = key)
     client.chat_postMessage(channel="#playground", text="GET test")
-    return "get_test"
+    return "get_test with lambda function (FastAPI Runtime)"
+
+@app.post("/crawl_data")
+async def crawl_data():
+    client = slack.WebClient(token = key)
+    client.chat_postMessage(channel="#playground", text="GET test")
+    return "get_test with lambda function (FastAPI Runtime)"
