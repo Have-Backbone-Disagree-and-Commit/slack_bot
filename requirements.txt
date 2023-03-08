@@ -1,9 +1,3 @@
-mangum
-ujson
 fastapi
-uvicorn[standard]
-slack-api
-slack-sdk
-aiohttp
-axios
-httpx
+uvicorn
+mangum
