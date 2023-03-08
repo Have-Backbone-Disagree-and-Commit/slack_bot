@@ -9,13 +9,9 @@ phases:
   build:
     commands:
       - echo "Zipping deployment package..."
-      - cd lib
+      - cd app
       - zip -r9 ../deployment_package.zip .
       - cd ..
-      - echo "Add main.py file"
-      - zip -g deployment_package.zip main.py
-      - echo "Add router files"
-      - zip -g deployment_package.zip ./routers/*
   post_build:
     commands:
       - echo "Updating lambda Function..."
