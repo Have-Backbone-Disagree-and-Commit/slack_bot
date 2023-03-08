@@ -2,5 +2,6 @@ fastapi
 uvicorn
 mangum
 httpx
+slack
 slack-api
 slack-sdk
