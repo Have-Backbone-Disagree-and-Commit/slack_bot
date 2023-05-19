@@ -98,7 +98,7 @@
 
 ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%208.png)
 
-# 4. Rambda 확인 및 테스트
+# 4. Lambda 확인 및 테스트
 
 ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%209.png)
 
@@ -116,9 +116,9 @@
 
 ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%2015.png)
 
-### 앞으로 Github를 통한 push 및 merge 요청으로 자동으로 Rambda에 배포됨
+### 앞으로 Github를 통한 push 및 merge 요청으로 자동으로 Lambda에 배포됨
 
-# 6. Rambda 환경설정 및 FastAPI 환경 구축
+# 6. Lambda 환경설정 및 FastAPI 환경 구축
 
 - Runtime 세팅 변경 (main.py의 handler function을 사용할 것이므로)
     
@@ -171,7 +171,7 @@
     
     ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%2017.png)
     
-- Rambda test 진행
+- Lambda test 진행
     
     ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%2018.png)
     
@@ -213,7 +213,7 @@
         return "get_test"
     ```
     
-- 람다의 Role에 SSM의 파라미터를 참조 할 수 있는 정책을 추가
+- Lambda의 Role에 SSM의 파라미터를 참조 할 수 있는 정책을 추가
     
     ([ERROR] ClientError: An error occurred (AccessDeniedException) when calling the GetParameter operation: User: arn:aws:sts::userid:assumed-role/Slackbot-FastAPI-Lambda-role-suc778in/Slackbot-FastAPI-Lambda is not authorized to perform: ssm:GetParameter on resource: arn:aws:ssm:ap-northeast-2:userid:parameter/slackapi/BOT_TOKEN because no identity-based policy allows the ssm:GetParameter action)
     
@@ -224,7 +224,7 @@
     ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%2021.png)
     
 
-# 8. CodePipeline 상태를 슬랙에 출력하는 람다작성
+# 8. CodePipeline 상태를 슬랙에 출력하는 Lambda function 작성
 
 - 런타임 환경작성
     - Runtime : Node.js 12.x
