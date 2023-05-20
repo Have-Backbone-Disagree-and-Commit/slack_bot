@@ -1,4 +1,49 @@
-# Lambda를 활용한 FastAPI 애플리케이션, Github, CodePipeline, CodeBuild를 활용한 CI/CD, Amazon EventBridge와 Lambda를 활용한 Pipeline 상태감지와 Slack전송
+<div align="center">
+
+![header](https://capsule-render.vercel.app/api?type=soft&color=F7DF1E&text=Slack%20Bot)
+
+</div>
+
+# 📌 Introduction
+<ul>
+    <li>AWS Lambda를 활용한 FastAPI 애플리케이션</li>
+    <li>Github, AWS CodePipeline, AWS CodeBuild를 활용한 CI/CD</li>
+    <li>Amazon EventBridge, AWS Lambda를 활용한 AWS codePipeline 상태 감지와 Slack 전송</li>
+    <li>
+        ./routers/crawlRouter.py
+        <p>
+            slack api를 사용해서 크롤러가 전송한 데이터한 데이터를 메시지 블록으로 만든 후 정해진 slack channel에 전송 
+        </p>
+    </li>
+    <li>
+        ./buildspec.yaml
+        <p>
+            AWS CodeBuild의 프로젝트 구성 파일(람다 함수의 빌드 및 배포 단계를 정의)
+        </p>
+    </li>
+</ul>
+
+### 목차
+<!--
+> 1. Lambda function 생성<br>
+> 2. Github을 활용하여 Source로 지정<br>
+> 3. CodeBuild를 통한 빌드 테스트<br>
+> 4. Lambda 확인 및 테스트<br>
+> 5. CodePipeline 생성 및 동작 확인<br>
+> 6. Lambda 환경 설정 및 FastAPI 환경 구축<br>
+> 7. 기존의 FastAPI 애플리케이션을 Lambda function으로 마이그레이션<br>
+> 8. CodePipeline 상태를 Slack에 출력하는 Lambda function 작성
+-->
+<ol>
+    <li>Lambda function 생성</li>
+    <li>Github을 활용하여 Source로 지정</li>
+    <li>CodeBuild를 통한 빌드 테스트</li>
+    <li>Lambda 확인 및 테스트</li>
+    <li>CodePipeline 생성 및 동작 확인</li>
+    <li>Lambda 환경 설정 및 FastAPI 환경 구</li>
+    <li>기존의 FastAPI 애플리케이션을 Lambda로 마이그레이션</li>
+    <li>CodePipeline 상태를 Slack에 출력하는 Lambda function 작성</li>
+</ol><br>
 
 # 1. Lambda function 생성
 
@@ -118,7 +163,7 @@
 
 ### 앞으로 Github를 통한 push 및 merge 요청으로 자동으로 Lambda에 배포됨
 
-# 6. Lambda 환경설정 및 FastAPI 환경 구축
+# 6. Lambda 환경 설정 및 FastAPI 환경 구축
 
 - Runtime 세팅 변경 (main.py의 handler function을 사용할 것이므로)
     
@@ -176,7 +221,7 @@
     ![Untitled](Lambda%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20FastAPI%20%E1%84%8B%E1%85%A2%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB,%20Github%20f4f1fe30f5674d80936378f7dc8c4aba/Untitled%2018.png)
     
 
-# 7. 기존의 FastAPI앱 마이그레이션
+# 7. 기존의 FastAPI 애플리케이션을 Lambda로 마이그레이션
 
 ### Get Test function 동작시켜보기
 
