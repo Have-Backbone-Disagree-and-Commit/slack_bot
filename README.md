@@ -6,24 +6,24 @@
 
 # 📌 Introduction
 <ul>
-    <li>AWS Lambda를 활용한 FastAPI 애플리케이션</li>
-    <li>Github, AWS CodePipeline, AWS CodeBuild를 활용한 CI/CD</li>
-    <li>Amazon EventBridge, AWS Lambda를 활용한 AWS codePipeline 상태 감지와 Slack 전송</li>
+    <li>AWS Lambda를 활용한 FastAPI 애플리케이션</li><br>
+    <li>Github, AWS CodePipeline, AWS CodeBuild를 활용한 CI/CD</li><br>
+    <li>Amazon EventBridge, AWS Lambda를 활용한 AWS codePipeline 상태 감지와 Slack 전송</li><br>
     <li>
         ./routers/crawlRouter.py
         <p>
-            slack api를 사용해서 크롤러가 전송한 데이터한 데이터를 메시지 블록으로 만든 후 정해진 slack channel에 전송 
+            👉 slack api를 사용해서 크롤러가 전송한 데이터한 데이터를 메시지 블록으로 만든 후 정해진 slack channel에 전송 
         </p>
     </li>
     <li>
         ./buildspec.yaml
         <p>
-            AWS CodeBuild의 프로젝트 구성 파일(람다 함수의 빌드 및 배포 단계를 정의)
+            👉 AWS CodeBuild의 프로젝트 구성 파일(람다 함수의 빌드 및 배포 단계를 정의)
         </p>
     </li>
 </ul>
 
-### 목차
+### README.md 목차
 <!--
 > 1. Lambda function 생성<br>
 > 2. Github을 활용하여 Source로 지정<br>
